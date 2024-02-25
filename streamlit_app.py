@@ -1,3 +1,4 @@
 import streamlit as st
 
-st.write('Hello world from Sean!中文')
+st.checkbox('水煮鱼')
+
