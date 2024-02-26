@@ -37,11 +37,17 @@ col1, col2, col3 = st.columns(3)
 st.subheader('面食',divider='gray')
 col1, col2, col3 = st.columns(3)
 韭菜盒子=col1.checkbox('韭菜盒子')
+三鲜水饺=col2.checkbox('三鲜水饺')
+西红柿鸡蛋面片=col3.checkbox('西红柿鸡蛋面片')
 
 ### 
 st.header('采购清单', divider='rainbow')
 
 mylist=[]
+if(西红柿鸡蛋面片):
+    mylist.extend(['面','鸡蛋','小青菜','西红柿','葱','蒜','姜'])
+if(三鲜水饺):
+    mylist.extend(['猪肉','虾仁','木耳','鸡蛋','香菇','韭菜','料酒','生抽','蚝油','盐','葱','姜','香油','油'])
 if(糖醋里脊):
     mylist.extend(['里脊肉','料酒','盐','鸡蛋','番茄酱','糖','白醋','淀粉','面粉'])
 if(青笋肉片):
