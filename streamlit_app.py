@@ -3,7 +3,7 @@ import streamlit as st
 st.title('食材采购助手')
 
 ###
-st.header('请选择菜单', divider='rainbow')
+st.header('选择菜单', divider='rainbow')
 
 # Beef and Goat
 st.subheader('牛羊肉',divider='gray')
@@ -15,6 +15,7 @@ col1, col2, col3 = st.columns(3)
 st.subheader('猪肉',divider='gray')
 col1, col2, col3 = st.columns(3)
 红烧肉=col1.checkbox('红烧肉')
+青笋肉片=col2.checkbox('青笋肉片')
 
 # Chicken
 st.subheader('鸡肉',divider='gray')
@@ -37,9 +38,11 @@ col1, col2, col3 = st.columns(3)
 韭菜盒子=col1.checkbox('韭菜盒子')
 
 ### 
-st.header('建议采购清单', divider='rainbow')
+st.header('采购清单', divider='rainbow')
 
 mylist=[]
+if(青笋肉片):
+    mylist.extend(['莴笋','猪肉','蒜','干辣椒','料酒','淀粉','生抽','黑胡椒粉','蚝油','盐'])
 if(香菇油菜):
     mylist.extend(['香菇','油菜','生抽','蚝油','盐','蒜'])
 if(红烧鸡):
