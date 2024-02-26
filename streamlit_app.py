@@ -17,6 +17,7 @@ col1, col2, col3 = st.columns(3)
 红烧肉=col1.checkbox('红烧肉')
 青笋肉片=col2.checkbox('青笋肉片')
 糖醋里脊=col3.checkbox('糖醋里脊')
+辣椒炒香肠=col1.checkbox('辣椒炒香肠')
 
 # Chicken
 st.subheader('鸡肉',divider='gray')
@@ -44,6 +45,9 @@ col1, col2, col3 = st.columns(3)
 st.header('采购清单', divider='rainbow')
 
 mylist=[]
+
+if(辣椒炒香肠):
+    mylist.extend(['香肠','薄皮辣椒','洋葱','姜','盐','生抽'])
 if(西红柿鸡蛋面片):
     mylist.extend(['面','鸡蛋','小青菜','西红柿','葱','蒜','姜'])
 if(三鲜水饺):
