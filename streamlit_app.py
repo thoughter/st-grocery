@@ -86,7 +86,7 @@ if(韭菜盒子):
 
 mkdn=''
 uniqlist=list(set(mylist))
-for item in uniqlist:
-    mkdn+=f'- {item}\n'
-
-st.markdown(mkdn)
+col=[None]*3
+col[0],col[1],col[2]=st.columns(3)
+for i,item in enumerate(uniqlist):
+  col[i%3].checkbox(item)
