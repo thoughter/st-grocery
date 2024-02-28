@@ -8,38 +8,50 @@ st.header('选择菜谱', divider='rainbow')
 # Beef and Goat
 st.subheader('牛羊肉',divider='gray')
 col1, col2, col3 = st.columns(3)
-芥兰牛=col1.checkbox('芥兰牛')
+with col1:
+  芥兰牛=st.checkbox('芥兰牛')
 
 
 # Pork
 st.subheader('猪肉',divider='gray')
 col1, col2, col3 = st.columns(3)
-红烧肉=col1.checkbox('红烧肉')
-青笋肉片=col2.checkbox('青笋肉片')
-糖醋里脊=col3.checkbox('糖醋里脊')
-辣椒炒香肠=col1.checkbox('辣椒炒香肠')
+with col1:
+  红烧肉=st.checkbox('红烧肉')
+  辣椒炒香肠=st.checkbox('辣椒炒香肠')
+with col2:
+  青笋肉片=st.checkbox('青笋肉片')
+with col3:
+  糖醋里脊=st.checkbox('糖醋里脊')
+
 
 # Chicken
 st.subheader('鸡肉',divider='gray')
 col1, col2, col3 = st.columns(3)
-红烧鸡=col1.checkbox('红烧鸡')
+with col1:
+  红烧鸡=st.checkbox('红烧鸡')
 
 # Seafood
 st.subheader('海鲜',divider='gray')
 col1, col2, col3 = st.columns(3)
-水煮鱼=col1.checkbox('水煮鱼')
-油焖大虾=col2.checkbox('油焖大虾')
+with col1:
+  水煮鱼=st.checkbox('水煮鱼')
+with col2:
+  油焖大虾=st.checkbox('油焖大虾')
 
 # Vegetables
 st.subheader('青菜',divider='gray')
 col1, col2, col3 = st.columns(3)
-香菇油菜=col1.checkbox('香菇油菜')
+with col1:
+  香菇油菜=st.checkbox('香菇油菜')
 
 st.subheader('面食',divider='gray')
 col1, col2, col3 = st.columns(3)
-韭菜盒子=col1.checkbox('韭菜盒子')
-三鲜水饺=col2.checkbox('三鲜水饺')
-西红柿鸡蛋面片=col3.checkbox('西红柿鸡蛋面片')
+with col1:
+  韭菜盒子=st.checkbox('韭菜盒子')
+with col2:
+  三鲜水饺=st.checkbox('三鲜水饺')
+with col3:
+  西红柿鸡蛋面片=st.checkbox('西红柿鸡蛋面片')
 
 ### 
 st.header('采购清单', divider='rainbow')
